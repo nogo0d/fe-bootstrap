@@ -1,6 +1,6 @@
 {
     "name": "@nogo0d-org/fe-bootstrap",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": false,
     "license": "MPL-2.0",
     "main": "./build/index.html",
@@ -83,10 +83,10 @@
         "./build"
     ],
     "description": "fe bootstrap app",
-        "repository": {
-            "type": "git",
-            "url": "git+https://github.com/nogo0d/fe-bootstrap.git"
-        },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nogo0d/fe-bootstrap.git"
+    },
     "author": "nogo0d",
     "bugs": {
         "url": "https://github.com/nogo0d/fe-bootstrap/issues"
