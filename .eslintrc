@@ -1,0 +1,188 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react-app",
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "import",
+    "unused-imports"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports-ts": "error",
+    "unused-imports/no-unused-vars-ts": [
+    "warn",
+    { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false
+      }
+    ],
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-fragments": [
+      "error",
+      "element"
+    ],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "props": "always",
+        "children": "never"
+      }
+    ],
+    "react/jsx-boolean-value": "error",
+    "react/jsx-key": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
+    "no-irregular-whitespace": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "util",
+            "message": "This is NodeJS library, don't use it"
+          },
+          {
+            "name": "path",
+            "message": "This is NodeJS library, don't use it"
+          }
+        ],
+        "patterns": [
+          "fp-ts/es6/*"
+        ]
+      }
+    ],
+    "no-debugger": "warn",
+    "no-duplicate-imports": [
+      "error",
+      {
+        "includeExports": true
+      }
+    ],
+    "arrow-body-style": [
+      "warn",
+      "as-needed"
+    ],
+    "id-blacklist": [
+      "error",
+      "x"
+    ],
+    "no-restricted-globals": [
+      "error",
+      "name",
+      "toString",
+      "pending"
+    ],
+    "prefer-template": "error",
+    "import/no-restricted-paths": [
+      "error",
+      {
+        "basePath": "src",
+        "zones": [
+          {
+            "target": "*.component.tsx",
+            "from": "view-model"
+          },
+          {
+            "target": "*.component.tsx",
+            "from": "api"
+          },
+          {
+            "target": "*.container.tsx?",
+            "from": "api"
+          },
+          {
+            "target": "*.story.tsx",
+            "from": "view-model"
+          },
+          {
+            "target": "*.story.tsx",
+            "from": "api"
+          },
+          {
+            "target": "models",
+            "from": "api/generated"
+          },
+          {
+            "target": "models",
+            "from": "view-model"
+          },
+          {
+            "target": "models",
+            "from": "ui/(?!ui-kit)"
+          },
+          {
+            "target": "*.view-model.ts",
+            "from": "ui"
+          },
+          {
+            "target": "ui",
+            "from": "api/overrides"
+          }
+        ]
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off", // @TODO put this way because of large number or errors
+    "@typescript-eslint/explicit-module-boundary-types": "off", // @TODO put this way because of large number or errors
+    "no-prototype-builtins": "off",
+    "import/order": ["error", {
+      "pathGroups": [
+        {
+          "pattern": "**/*.+(css|sass|less|scss|pcss|styl)",
+          "patternOptions": {"dot": true, "nocomment": true},
+          "group": "unknown",
+          "position": "after"
+        },
+        {
+          "pattern": "{.,..}/**/*.+(css|sass|less|scss|pcss|styl)",
+          "patternOptions": {"dot": true, "nocomment": true},
+          "group": "unknown",
+          "position": "after"
+        }
+      ]
+    }]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser"
+}
