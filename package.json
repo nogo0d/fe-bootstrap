@@ -1,0 +1,85 @@
+{
+    "name": "@nogo0d/fe-bootstrap",
+    "version": "0.0.1",
+    "private": false,
+    "license": "MPL-2.0",
+    "main": "./build/index.html",
+    "browser": "./build/index.html",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "build:run": "yarn serve ./build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "cicheck": "tsc --noemit && yarn lint",
+        "lint": "eslint './src/**/*.{ts,tsx}'",
+        "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
+        "storybook": "start-storybook -p 6006 -s public",
+        "build-storybook": "build-storybook -s public",
+        "prepublishOnly": "yarn build"
+    },
+    "dependencies": {
+        "@devexperts/react-kit": "^1.0.0-alpha.14",
+        "@devexperts/remote-data-ts": "^2.0.5",
+        "@devexperts/rx-utils": "^1.0.0-alpha.14",
+        "fp-ts": "^2.9.5",
+        "fp-ts-routing": "^0.5.4",
+        "fp-ts-rxjs": "^0.6.13",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-router-dom": "^5.2.0",
+        "reselect": "^4.0.0",
+        "rxjs": "^6.6.3",
+        "typescript": "^4.1.2"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^6.1.17",
+        "@storybook/addon-essentials": "^6.1.17",
+        "@storybook/addon-links": "^6.1.17",
+        "@storybook/node-logger": "^6.1.17",
+        "@storybook/preset-create-react-app": "^3.1.5",
+        "@storybook/react": "^6.1.17",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "@types/jest": "^26.0.15",
+        "@types/node": "^12.0.0",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@types/react-router-dom": "^5.1.7",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-import-resolver-typescript": "^2.3.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react-app": "^6.2.2",
+        "eslint-plugin-unused-imports": "^1.0.1",
+        "git-conventional-commits": "^1.0.7",
+        "npm": "^7.5.4",
+        "prettier": "^2.1.2",
+        "prettier-eslint": "^11.0.0",
+        "react-scripts": "4.0.2",
+        "serve": "^11.3.2",
+        "web-vitals": "^1.0.1"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "files": [
+        "./build"
+    ]
+}
