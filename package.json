@@ -16,7 +16,8 @@
         "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
-        "prepublishOnly": "yarn build"
+        "prepublishOnly": "yarn build",
+        "postinstall": "husky install"
     },
     "dependencies": {
         "@devexperts/react-kit": "^1.0.0-alpha.14",
@@ -54,6 +55,8 @@
         "eslint-plugin-react-app": "^6.2.2",
         "eslint-plugin-unused-imports": "^1.0.1",
         "git-conventional-commits": "^1.0.7",
+        "husky": "^5.0.9",
+        "lint-staged": "^10.5.4",
         "npm": "^7.5.4",
         "prettier": "^2.1.2",
         "prettier-eslint": "^11.0.0",
@@ -91,5 +94,16 @@
     "bugs": {
         "url": "https://github.com/nogo0d/fe-bootstrap/issues"
     },
-    "homepage": "https://github.com/nogo0d/fe-bootstrap#readme"
+    "homepage": "https://github.com/nogo0d/fe-bootstrap#readme",
+    "lint-staged": {
+        "src/**/*.{ts,tsx}": [
+            "yarn lint:fix",
+            "git add ."
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
 }
