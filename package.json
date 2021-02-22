@@ -3,8 +3,15 @@
     "version": "0.0.2",
     "private": false,
     "license": "MPL-2.0",
-    "main": "./build/index.html",
-    "browser": "./build/index.html",
+    "description": "FE WEB bootstrap",
+        "repository": {
+            "type": "git",
+            "url": "git+https://github.com/nogo0d/fe-bootstrap.git"
+        },
+    "author": "nogo0d",
+    "bugs": {
+        "url": "https://github.com/nogo0d/fe-bootstrap/issues"
+    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
@@ -85,16 +92,6 @@
     "files": [
         "./build"
     ],
-    "description": "fe bootstrap app",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nogo0d/fe-bootstrap.git"
-    },
-    "author": "nogo0d",
-    "bugs": {
-        "url": "https://github.com/nogo0d/fe-bootstrap/issues"
-    },
-    "homepage": "https://github.com/nogo0d/fe-bootstrap#readme",
     "lint-staged": {
         "src/**/*.{ts,tsx}": [
             "yarn lint:fix",
